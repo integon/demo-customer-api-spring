@@ -6,7 +6,7 @@ ADD . $HOME
 RUN mvn -version
 RUN mvn package -Dmaven.test.skip
 RUN echo $JAVA_HOME
-FROM openjdk:17-alpine
+FROM openjdk:19-alpine
 COPY --from=build /usr/app/target/customer-api-1.0.0.jar /app/customer-api-1.0.0.jar
 
 # Set a non-root user
