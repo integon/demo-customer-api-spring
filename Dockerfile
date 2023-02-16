@@ -1,4 +1,4 @@
-FROM maven:3.8.5-openjdk-17 as build
+FROM maven:3.9.0-eclipse-temurin-19-focal as build
 ENV HOME=/usr/app
 RUN mkdir -p $HOME
 WORKDIR $HOME
